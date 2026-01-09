@@ -6,6 +6,8 @@
       --dark: #1a1a1a; 
       --light: #f8f9fa;
     }
+
+    #toastContainer { position: fixed; top: 20px; right: 20px; z-index: 9999; }
     body { 
       font-family: 'Segoe UI', sans-serif; 
       background: var(--light);

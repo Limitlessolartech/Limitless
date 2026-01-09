@@ -8,22 +8,25 @@
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="solar installation Africa, solar company Lagos, solar maintenance, solar energy Africa">
   <link rel="canonical" href="https://www.limitlessolartech.com/contact.html">
+
   <meta property="og:title" content="Contact Limitless Solar Tech" />
-  <meta property="og:description" content="Reach out for solar installation, maintenance, and expert support anywhere in Africa
+  <meta property="og:description" content="Reach out for solar installation, maintenance, and expert support anywhere in Africa" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Limitless Solar Tech">
   <meta name="twitter:description" content="Get in touch with our solar experts today.">
   <meta name="twitter:image" content="https://www.limitlessolartech.com/images/Limitless-solar-og.jpg">
+
   <link rel="icon" type="image/png" href="./images/Limitless solar.svg" />
   <link rel="stylesheet" href="./css/contact.css">
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
-   
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -51,18 +54,17 @@
   <div class="hero-content" data-aos="fade-up">
     <h1>Get in Touch</h1>
     <p class="lead">We are here to answer your solar questions and power your future.</p>
-    
   </div>
 </header>
-
 
 <section class="py-5" id="contact-form">
   <div class="container">
     <div class="row g-5">
-      
+
+      <!-- Contact Info -->
       <div class="col-lg-5" data-aos="fade-right">
         <h2 class="section-title mb-4">Contact Information</h2>
-        
+
         <div class="contact-card p-4 mb-4">
           <div class="d-flex align-items-center mb-3">
             <i class="bi bi-geo-alt-fill contact-icon me-3"></i>
@@ -85,23 +87,18 @@
             </div>
           </div>
         </div>
-        
 
         <div class="contact-card p-4 mb-4"> 
-  <div class="d-flex align-items-center mb-3">
-    <i class="bi bi-envelope-fill contact-icon me-3"></i>
-     
-    <div>
-      <h5 class="mb-0">Email</h5>
-      <p class="mb-0">
-        <a href="mailto:limitlessolartech@gmail.com">
-          <i ></i> limitlessolartech@gmail.com
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-envelope-fill contact-icon me-3"></i>
+            <div>
+              <h5 class="mb-0">Email</h5>
+              <p class="mb-0">
+                <a href="mailto:limitlessolartech@gmail.com">limitlessolartech@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div class="contact-card p-4">
           <h5 class="mb-3">Business Hours</h5>
@@ -115,19 +112,19 @@
       <!-- Contact Form -->
       <div class="col-lg-7" data-aos="fade-left">
         <h2 class="section-title mb-4">Send Us a Message</h2>
-        <div class="contact-card p-4 p-md-5  " style="min-height:600px;">
+        <div class="contact-card p-4 p-md-5" style="min-height:600px;">
           <form id="contactForm">
-            <div class="row g-3" >
-              <div class="col-md-6" style="padding-top: 20px;" >
-                <input type="text" class="form-control"  id="fullName" placeholder="Full Name *" required>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="fullName" placeholder="Full Name *" required>
               </div>
-              <div class="col-md-6" style="padding-top: 20px;">
+              <div class="col-md-6">
                 <input type="email" class="form-control" id="email" placeholder="Email Address *" required>
               </div>
-              <div class="col-md-6" style="padding-top: 20px;">
+              <div class="col-md-6">
                 <input type="tel" class="form-control" id="phone" placeholder="Phone Number *" required>
               </div>
-              <div class="col-md-6" style="padding-top: 20px;">
+              <div class="col-md-6">
                 <select class="form-control" id="service" required>
                   <option value="">Select Service *</option>
                   <option>Residential Solar</option>
@@ -137,18 +134,28 @@
                   <option>Other</option>
                 </select>
               </div>
-              <div class="col-12" style="padding-top: 20px;">
+              <div class="col-12">
                 <textarea class="form-control" id="message" rows="5" placeholder="Your Message *" required></textarea>
               </div>
-              <div class="col-12 " style="margin-top: 55px;">
-                <button type="submit" class="btn btn-success btn-lg w-100 " id="submitBtn">
+              <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-success btn-lg w-100" id="submitBtn">
                   <span id="btnText">Send Message</span>
                   <span id="btnSpinner" class="spinner-border spinner-border-sm ms-2" role="status" style="display:none;"></span>
                 </button>
               </div>
+
+              <!-- Honeypot -->
+              <input type="text" id="company" name="company" style="display:none;">
+
+              <!-- Google reCAPTCHA v2 -->
+              <div class="col-12 mt-3">
+                <div class="g-recaptcha" data-sitekey="6Le9VEUsAAAAAHEyeH9vQGFGRZkPbxk551FUCdDv"></div>
+              </div>
+
+              <small class="text-muted d-block mt-3">* We respect your privacy. Your info is safe with us.</small>
+              <p id="timerMsg" class="mt-2 text-danger"></p>
             </div>
           </form>
-          <small class="text-muted d-block mt-3">* We respect your privacy. Your info is safe with us.</small>
         </div>
       </div>
     </div>
@@ -157,21 +164,14 @@
     <div class="mt-5" data-aos="fade-up">
       <h2 class="section-title text-center mb-4">Find Us on the Map</h2>
       <div class="map-container">
-        
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.720553211714!2d3.551641176584608!3d6.429934293561139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf7a4f7d2c551%3A0xb564060e2bdf63af!2s9%20Ocean%20Bay%20Dr%2C%20Lekki%20Penninsula%20II%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1763103683906!5m2!1sen!2sng"
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.720553211714!2d3.551641176584608!3d6.429934293561139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf7a4f7d2c551%3A0xb564060e2bdf63af!2s9%20Ocean%20Bay%20Dr%2C%20Lekki%20Penninsula%20II%2C%20Lagos!5e0!3m2!1sen!2sng!4v1763103683906!5m2!1sen!2sng"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- CTA -->
 <section class="cta-band py-5 text-center">
@@ -186,10 +186,8 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="d-flex align-items-center mb-3">
-          <img src="./images/image.png" alt="Logo" style="height: 70px; width: 150px; background: white; border-radius: 8px;" >
-        </div>
-        <p class="small text-light">... how is the sun serving you today?</p>
+        <img src="./images/image.png" alt="Logo" style="height: 70px; width: 150px; background: white; border-radius: 8px;">
+        <p class="small text-light mt-2">... how is the sun serving you today?</p>
       </div>
       <div class="col-md-4">
         <h6 class="fw-bold mb-3">Quick Links</h6>
@@ -200,71 +198,100 @@
           <li><a href="contact.html" class="nav-link text-light">Contact</a></li>
         </ul>
       </div>
-
-      
-     <div class="col-md-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
-        <ul class="list-unstyled small mb-0">
-          <li><i class="bi bi-geo-alt text-warning me-1"></i> 9 Ocean Bay Estate, Lekki, Lagos</li>
-          <a href="https://wa.me/2348061203027" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer"><li><i class="bi bi-telephone text-warning me-1"></i> +234 806 120 3027</li></a>
-          <a href="mailto:limitlessolartech@gmail.com" class="text-decoration-none text-light"><li><i class="bi bi-envelope text-warning me-1"></i> limitlessolartech@gmail.com</li></a>
-          <a href="https://www.tiktok.com/@limitlesssolartech?_r=1&_t=ZS-91SWQ4FSp98" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer"><li><i class="fab fa-tiktok me-1 text-warning"></i> TikTok</li></a>
-         <a href="https://www.instagram.com/limitlessolartech?igsh=d2ltNTJqbXY2bHhl" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer"><li><i class="fab fa-instagram me-1 text-warning"></i> Instagram</li></a>
-        </ul>
-      </div>
-    </div>
-    <hr class="border-secondary my-4" />
-    <p class="small text-center mb-0">© 2025 Limitless Solar Tech. All rights reserved.</p>
-  </div>
+      <div class="col-md-4"> <h6 class="fw-bold mb-3">Contact</h6> <ul class="list-unstyled small mb-0"> <li><i class="bi bi-geo-alt text-warning me-1"></i> 9 Ocean Bay Estate, Lekki, Lagos</li> <a href="https://wa.me/2348061203027" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer"><li><i class="bi bi-telephone text-warning me-1"></i> +234 806 120 3027</li></a> <a href="mailto:limitlessolartech@gmail.com" class="text-decoration-none text-light"><li><i class="bi bi-envelope text-warning me-1"></i> limitlessolartech@gmail.com</li></a> <a href="https://www.tiktok.com/@limitlesssolartech?_r=1&_t=ZS-91SWQ4FSp98" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer"><li><i class="fab fa-tiktok me-1 text-warning"></i> TikTok</li></a> <a href="https://www.instagram.com/limitlessolartech?igsh=d2ltNTJqbXY2bHhl" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer"><li><i class="fab fa-instagram me-1 text-warning"></i> Instagram</li></a> </ul> </div> </div> <hr class="border-secondary my-4" /> <p class="small text-center mb-0">© 2025 Limitless Solar Tech. All rights reserved.</p> </div>
 </footer>
 
+<!-- Toast Container -->
+<div id="toastContainer" class="position-fixed top-0 end-0 p-3"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
 <script>
-  AOS.init({ duration: 1000, once: true });
-  window.addEventListener('scroll', () => {
-    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+AOS.init({ duration: 1000, once: true });
+emailjs.init("Q23MeEo6v2cWNdI_b");
+
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const btnText = document.getElementById('btnText');
+const btnSpinner = document.getElementById('btnSpinner');
+const honeypot = document.getElementById('company');
+const timerMsg = document.getElementById('timerMsg');
+
+let cooldown = false;
+
+// Show toast
+function showToast(message, type='success', duration=3000){
+  const toastContainer = document.getElementById('toastContainer');
+  const toastEl = document.createElement('div');
+  toastEl.className = `toast align-items-center text-bg-${type} border-0 show`;
+  toastEl.setAttribute('role','alert');
+  toastEl.innerHTML = `<div class="d-flex">
+    <div class="toast-body">${message}</div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+  </div>`;
+  toastContainer.appendChild(toastEl);
+  setTimeout(()=>{ toastEl.remove(); }, duration);
+}
+
+// Cooldown timer with persistence
+function startCooldown(minutes=5){
+  const endTime = Date.now() + minutes*60*1000;
+  localStorage.setItem('contactCooldown', endTime);
+  updateCooldown();
+}
+
+function updateCooldown(){
+  const endTime = localStorage.getItem('contactCooldown');
+  if(!endTime){ cooldown=false; timerMsg.textContent=''; return; }
+  let remaining = Math.floor((endTime - Date.now())/1000);
+  if(remaining > 0){
+    cooldown = true;
+    timerMsg.textContent = ` ${Math.floor(remaining/60)}:${remaining%60 <10 ? '0'+remaining%60 : remaining%60}`;
+    setTimeout(updateCooldown, 1000);
+  } else {
+    cooldown = false;
+    timerMsg.textContent = '';
+    localStorage.removeItem('contactCooldown');
+  }
+}
+
+updateCooldown(); // run on page load
+
+contactForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(honeypot.value) return;
+  if(cooldown){ showToast("Please wait before sending again", "warning"); return; }
+  if(!grecaptcha.getResponse()){ showToast("Please complete the reCAPTCHA", "warning"); return; }
+
+  submitBtn.disabled = true;
+  btnText.textContent = "Sending...";
+  btnSpinner.style.display = "inline-block";
+
+  const templateParams = {
+    from_name: document.getElementById('fullName').value,
+    from_email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value,
+    service: document.getElementById('service').value,
+    message: document.getElementById('message').value
+  };
+
+  emailjs.send("service_fmoy8xn","template_zon809r", templateParams)
+  .then(()=>{
+    showToast("Message sent successfully!", "success", 5000);
+    contactForm.reset();
+    grecaptcha.reset();
+    startCooldown(5);
+  })
+  .catch(err=>{
+    console.error(err);
+    showToast("Failed to send message.", "danger", 5000);
+  })
+  .finally(()=>{
+    submitBtn.disabled = false;
+    btnText.textContent = "Send Message";
+    btnSpinner.style.display = "none";
   });
-
-  emailjs.init("Q23MeEo6v2cWNdI_b");
-
-  const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const btnText = document.getElementById('btnText');
-  const btnSpinner = document.getElementById('btnSpinner');
-
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    submitBtn.disabled = true;
-    btnText.textContent = 'Sending...';
-    btnSpinner.style.display = 'inline-block';
-
-    const templateParams = {
-      from_name: document.getElementById('fullName').value,
-      from_email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      service: document.getElementById('service').value,
-      message: document.getElementById('message').value
-    };
-
-    emailjs.send("service_fmoy8xn", "template_zon809r", templateParams)
-      .then(() => {
-        alert('Message sent! Thank you.');
-        contactForm.reset();
-      })
-      .catch((err) => {
-        console.error('EmailJS error:', err);
-        alert('Failed to send. Try again later.');
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        btnText.textContent = 'Send Message';
-        btnSpinner.style.display = 'none';
-      });
-  });
+});
 </script>
 </body>
 </html>
